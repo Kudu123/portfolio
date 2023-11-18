@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="pflo_prjt.css">
+    <script src="https://kit.fontawesome.com/c056c12f2e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div id="header">
+        <div class="container">
+            <nav>
+               <div class="logo"><h1>portfolio</h1></div>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                   
+                    <li><a href="https://kudu123.github.io/wisdom_waves/">Blog</a></li>
+                    
+                    <li><a href="#contact">Contact</a></li>
+                  <div class="fa"><i class="fa-solid fa-xmark" onclick="closemenu()"></i></div>  
+                </ul>
+                <div class="fas "><i class="fa-solid fa-bars" onclick="openmenu()"></i></div>
+               
+            </nav>
+        
+         
+
+          
+
+<br><br><br><br><br><b><br></b>
+
+<div class="card-container">
+    <div class="card">
+        <div class="card-content">
+            <h2><br><br><br><br>Card 1</h2>
+            <p>This is some text for Card 1.</p>
+        </div>
+    </div>
+
+    <div class="card" style=" background-image: url('image-30.png');">
+        <div class="card-content" >
+            <h2><br><br><br><br>Card 2</h2>
+            <p>This is some text for Card 2.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+           
+            <h2><br><br><br><br>Card 3</h2>
+            <p>This is some text for Card 3.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br>
+<div id="contact">
+    <div class="container">
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"  ></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="coppyright">
+        <p>@ 2023 Portfolio <i class="fa-regular fa-heart"></i> ,All rights reserved </p>
+    </div>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+
+                tabcontent.classList.remove("active-tab");
+
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+<script>
+
+
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+
+
+</script>
+
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzw5gf8l9GN1qVc4dSyp3UDl-jk63puYt6h2DzcOFSeJ09WYOcByUHSA1bD0mkLAfG6tw/exec'
+    const form = document.forms['submit-to-google-sheet']
+  constmsg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "message sent sucessfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+
+</body>
+
+</html>
