@@ -14,15 +14,14 @@ body{
 #header{
     width: 100%;
     height: 95vh;
+  
    
 
 }
 .header-text img{
     position: fixed;
 }
-#header{
 
-}
 .container{
     padding: 10px 10%;
 }
@@ -60,7 +59,7 @@ nav{
 }
 .logo{
     width: 140px;
-    font-size: large;
+    font-size: 150%;
     margin-left: -5%;
 }
 
@@ -98,6 +97,7 @@ height: 90%;
 position: relative;
     font-size: 25px;
     margin-left: 15%;
+     
 
 }
 .header-text1{
@@ -115,14 +115,17 @@ position: relative;
 }
 /*----------------------about-------------*/
 #about{
-    padding: 3px 0;
+    padding: 10px 0;
     color: rgb(255, 255, 255);
 margin-top: -11%;
+position: relative;
+
 }
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 
 .about-col-1{
@@ -188,7 +191,7 @@ font-size: 18px;
   
 
 }
-/*----------------------service-------------*/
+/*----------------------skill-------------*/
 
 #services{
 padding: 30px 0;
@@ -211,6 +214,7 @@ padding: 30px 0;
 }
 #services h1{
     margin-left: 3%;
+    padding: auto;
 }
 .services-list div I{
     font-size: 50px;
@@ -234,16 +238,94 @@ padding: 30px 0;
     background: rgb(2, 172, 2);
     transform: translateY(-10px);
 }
+/*----------------------projects-------------*/
+
+#projects{
+    padding: 30px 0;
+   
+    width: 50%;
+    height: 50%;
+    
+    }
+
+
+    #projects  .services-list{
+        padding-left: 5%;
+    } 
+    #projects h1{
+        padding-left: 30px;
+       
+    }
+    .services-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid: gap 40px;
+        margin-top: 50px;
+        padding-left: 2%;
+       
+    }
+    .services-list div{
+        background: rgb(95, 95, 95);
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 300;
+        border-radius: 10px;
+        width: 80%;
+      transition: backround 0.5s, transform 0.5s;
+        margin-left: 5%;
+        
+    }
+    
+    #services h1{
+        margin-left: 3%;
+    }
+    .services-list div I{
+        font-size: 50px;
+        margin-bottom: 30px;
+    
+    }
+    .services-list div h2{ 
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    
+    }
+    .services-list div a{
+        text-decoration: none;
+        color: aliceblue;
+        font-size: 15px;
+        margin-top: 20px;
+        
+        display: inline-block;
+    }
+    .services-list button{
+        background-color: rgb(255, 255, 255); 
+        color: rgb(0, 0, 0); 
+        border: 2px solid #e3e3e3;
+        border-radius: 5px;
+        width: auto;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 2px;
+        height: auto;
+    }
+    .services-list button:hover {
+        background-color:rgb(95, 95, 95);
+        color: white;
+      }
+    .services-list div:hover{
+        background: rgb(2, 172, 2);
+        transform: translateY(-10px);
+      
+    }
 
 /*----------------------contact-------------*/
 
 .contact-left{
-    flex-basis: 35%;
+    flex-basis: 305%;
     margin-top: 10%;
 }
 .contact-right{
-    flex-basis: 60%;
-    margin-top: 10%;
+  
 }
 .contact-left p{
     margin-top: 30px;
@@ -293,10 +375,7 @@ transform: translateY(-5px);
     border-radius: 10px;
 
 }
-.contact-right form{
-    width: 100%;
 
-}
 form input, form textarea{
     width: 100%;
     border: 0;
@@ -316,20 +395,31 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 }
-.coppyright{
-    width: 100%;
-    text-align: center;
-    padding: 9px 0;
-    background: rgb(49, 49, 48);
-    font-weight: 300;
-    margin-top: 20px;
-    
-}
-.coppyright i{
-    color: rgba(26, 255, 0, 0.7);
-}
+
+
 
 /*-----------------------responsive for small screen------------*/
+@media only screen and (max-width:1000px) {
+   #projects {
+    padding: 100px 0;
+   
+    width: 100%;
+    height: 100%;
+    }
+  }
+@media only screen and (max-width:500px) {
+   #projects .services-list{
+    padding: 10px 0;
+    align-items: center;
+    width: 70%;
+    align-items: center;
+    height: 100%;
+    margin-left: 15%;
+    }
+  }
+
+
+
 nav .fas{
     display: none;
   }
@@ -397,9 +487,7 @@ left: 25px;
   
   
   }
-  @media only screen and (max-width:963px) {
-   
-  }
+ 
   @media only screen and (max-width:766px) {
     nav ul li a{
         color:rgb(255, 255, 255) ;
@@ -465,10 +553,11 @@ margin-bottom: -11%;
   }
   @media only screen and (max-width:840px) {
     .header-text{
-        margin-top: 20%;
+        margin-top: 10%;
         font-size: 19px;
         margin-left: 15%;
         margin-left: -40px;
+        padding-bottom: 5%;
     }
     .header-text h1{
         font-size: 40px;
@@ -583,12 +672,8 @@ padding-top: 10%;
     margin-right: 20px;
 }
 
-.contact-left, .contact-right{
-    flex-basis: 100%;
-}
-.coppyright{
-    font-size: 14px;
-}
+
+
 
 
 
