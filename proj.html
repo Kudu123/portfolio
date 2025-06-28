@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="proj.css">
+    <script src="https://kit.fontawesome.com/c056c12f2e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div id="header">
+        <div class="container">
+            <nav>
+               <div class="logo"><h1>portfolio</h1></div>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="https://kudu123.github.io/wisdom_waves/">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  <div class="fa"><i class="fa-solid fa-xmark" onclick="closemenu()"></i></div>  
+                </ul>
+                <div class="fas "><i class="fa-solid fa-bars" onclick="openmenu()"></i></div>
+               
+            </nav>
+            
+        
+ 
+    </div>
+   
+    
+
+    <!-----------skills-------------------------- --->
+
+    <div id="services">
+        <div class="container"></div>
+        <h1 class="sub-title" style="margin-left: 15%; margin-top: 5%; ">Waste management system</h1>
+        <div class="services-list">
+            <div style="margin-top: 20px;">
+                
+              <img src="d902d00d-11ef-4570-ad13-506e5cf67182.png" alt="" style="width: 100%;height:55%; ">
+                <h2></h2>
+                <p style="font-size: 200%;font-weight:500px;"> <span> Problem Statement:</span><br>
+In most cities, waste collection follows a fixed schedule regardless of bin status. This often leads to: <br>
+
+Overflowing bins in busy areas. <br>
+
+Wasted fuel and time collecting empty bins. <br>
+
+Lack of real-time monitoring and inefficient resource use.<br><br>
+Project Goal:<br>
+To build a smart, data-driven waste collection system that:<br>
+
+Uses IoT sensors to monitor bin levels in real time.<br>
+
+Uses location data to map and optimize collection routes.<br>
+
+Helps municipalities or private agencies automate waste management efficiently.<br><br>
+
+Technology Stack:<br>
+Component	Technology Used<br>
+Backend	Python, Django<br>
+Frontend	HTML, CSS, JavaScript<br>
+Database	SQLite / MySQL (SQL)<br>
+IoT Integration	Ultrasonic sensor, NodeMCU (ESP8266), Wi-Fi<br>
+APIs	Google Maps API (for routes), Custom REST APIs<br>
+Hosting (Optional)	PythonAnywhere / AWS / Heroku<br><br>
+
+System Architecture:<br>
+IoT Layer (Hardware)<br>
+
+Ultrasonic Sensor inside each bin detects the fill level.<br>
+
+A microcontroller (e.g., NodeMCU) reads the data and sends it via Wi-Fi to the Django server using HTTP requests (API).<br>
+
+Backend (Server)<br>
+
+Receives sensor data and stores it in the SQL database.<br>
+
+Uses logic to determine which bins need immediate collection.<br>
+
+Provides data to the frontend via APIs.<br>
+
+Frontend (Web Interface)<br>
+
+Admin dashboard to monitor:<br><br>
+
+All registered bins<br>
+
+Their real-time status (full/half/empty)<br>
+
+Recommended optimized collection routes.<br>
+
+Built using HTML/CSS and JavaScript with interactive maps.<br>
+
+Routing System<br>
+
+Uses location coordinates from bins.<br>
+
+Google Maps API suggests the most efficient path to visit all full bins.<br><br>
+
+Workflow:<br>
+Bin Registration: Each user or area admin registers a bin’s location through the interface.<br><br>
+
+Sensor Monitoring: IoT sensors constantly monitor fill levels.<br>
+
+Data Transmission: Data is sent to the Django backend via API every few minutes.
+<br><br>
+Status Update:<br> The system tags bins as:<br>
+
+Empty<br>
+
+Half-full<br>
+
+Full (ready for pickup)<br>
+
+Route Planning: The system generates a smart route plan to collect only the full bins.<br><br>
+
+Admin Interface: Shows maps, statuses, and notifications for critical bins.<br><br>
+
+Results and Benefits:<br>
+Efficiency: Reduces collection time and fuel use by up to 40%<br><br>
+Real-Time Monitoring: Authorities can track all bins live<br><br>
+Cost-Saving: Reduces manpower and unnecessary trips<br><br>
+<span style="font-weight: 900px;"> Scalability: </span>Can be scaled city-wide or used in campuses, hospitals, factories<br><br>
+Eco-Friendly: Minimizes overflows, helps maintain hygiene<br><br>
+
+Future Improvements:<br><br>
+Add machine learning for predictive waste patterns.<br>
+
+Use QR codes for bin authentication.<br>
+
+Enable mobile app notifications for users and collectors.<br>
+
+Add GPS tracking for collection trucks.
+<br>
+</p> 
+            </div>
+            
+            
+        </div>
+
+    </div> <br>
+    
+    <!-----------Projects-------------------------- --->
+<!-----------skills-------------------------- --->
+
+    <div id="services">
+        <div class="container"></div>
+        <h1 class="sub-title" style="margin-left: -5%;">Images</h1>
+        <br>
+        <h2>USER</h2>
+        <div class="services-list">
+           
+
+            <div style="margin-top: 20px;">
+              <img src="Picture1.jpg" alt="" style="width: 100%; ">
+        
+            </div>
+            <div style="margin-top: 20px;">
+              <img src="Picture2.jpg" alt="" style="width: 100%; ">
+                
+            </div>
+              <div style="margin-top: 20px;">
+              <img src="Picture3.jpg" alt="" style="width: 100%; ">
+                
+            </div>
+              
+            
+            
+            
+        </div>
+           <div class="services-list">
+           
+
+            <div style="margin-top: 20px;">
+              <img src="Picture4.jpg" alt="" style="width: 100%; ">
+                
+            </div>
+            
+              <div style="margin-top: 20px;">
+              <img src="Picture5.jpg" alt="" style="width: 100%; ">
+                
+            </div>
+            <div style="margin-top: 20px;">
+              <img src="Picture6.jpg" alt="" style="width: 100%; ">
+                
+            </div>
+             
+            
+            
+            
+        </div>
+
+    </div>
+    
+    <!------------contact-------------------------- --->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left"><br>
+                    <h1 class="sub-title" style="margin-left: -10%;">Get in Touch</h1><br><br>
+
+
+
+                </div>
+                
+                <div class="contact-right" >
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"  ></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+<br>
+                        <br><div class="social-icons" style="margin-left: 25%;">
+    <a href="https://www.facebook.com/edwin.thomas.1800721?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://instagram.com/_k_u_d_u_?igshid=ZDc4ODBmNjlmNQ=="><i class="fa-brands fa-square-instagram"></i></a>
+
+    <a href="https://twitter.com/EDWINTHOMA66351?t=Mwupk8RS46jUgpBA1XOQHg&s=09"><i class="fa-brands fa-twitter"></i></a>
+  
+    <a href="#"><i class="fa-brands fa-github"></i></a>
+</div>
+                    </form>
+                    <span id="msg"></span>
+                    
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+
+                tabcontent.classList.remove("active-tab");
+
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+<script>
+
+
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+
+
+</script>
+
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzw5gf8l9GN1qVc4dSyp3UDl-jk63puYt6h2DzcOFSeJ09WYOcByUHSA1bD0mkLAfG6tw/exec'
+    const form = document.forms['submit-to-google-sheet']
+  constmsg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "message sent sucessfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+
+</body>
+
+</html>
